@@ -9,15 +9,21 @@ void menu() {
 }
 
 int main() {
+  // setup
+  char user[50], database[50], user_password[100], file[50];
+  printf("user: ");
+  scanf("%s", user);
+
+  printf("password: ");
+  scanf("%s", user_password);
+
   char option;
   char actions[3] = {'r', 'c', 'q'};
   
-  char database[50];
   printf("Database: ");
   scanf("%s", database);
   
   printf("file name: ");
-  char file[50];
   scanf("%s", file);
   
   char comando[128];
@@ -27,7 +33,7 @@ int main() {
     scanf(" %c", &option);
     
     if (option == actions[0]) {
-      sprintf(comando, "PGPASSWORD=yourpassword-here psql -U your-username-here -d %s -f %s", database, file);
+      sprintf(comando, "PGPASSWORD=%s psql -U %s -d %s -f %s", user_password, user, database, file);
       system(comando);
     } else if (option == actions[1]) {
       system("clear");
