@@ -5,6 +5,7 @@
 void menu() {
   printf("r => run file \n");
   printf("c => clean console \n");
+  printf("d => change database");
   printf("q => quit \n");
 }
 
@@ -18,7 +19,7 @@ int main() {
   scanf("%s", user_password);
 
   char option;
-  char actions[3] = {'r', 'c', 'q'};
+  char actions[4] = {'r', 'c', 'q', 'd'};
   
   printf("Database: ");
   scanf("%s", database);
@@ -40,6 +41,10 @@ int main() {
       menu();
     } else if (option == actions[2]) {
       printf("closing \n");
+    } else if (option == actions[3]) {
+      system("clear");
+      printf("Name of Database: ");
+      scanf("%s", database);
     } else {
       printf("that option doesn't exist \n");
     }
