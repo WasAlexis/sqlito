@@ -5,7 +5,8 @@
 void menu() {
   printf("r => run file \n");
   printf("c => clean console \n");
-  printf("d => change database");
+  printf("d => change database \n");
+  printf("f => change file (path) \n");
   printf("q => quit \n");
 }
 
@@ -19,12 +20,12 @@ int main() {
   scanf("%s", user_password);
 
   char option;
-  char actions[4] = {'r', 'c', 'q', 'd'};
+  char actions[] = {'r', 'c', 'q', 'd', 'f'};
   
   printf("Database: ");
   scanf("%s", database);
   
-  printf("file name: ");
+  printf("file name (path): ");
   scanf("%s", file);
   
   char comando[128];
@@ -45,6 +46,12 @@ int main() {
       system("clear");
       printf("Name of Database: ");
       scanf("%s", database);
+      menu();
+    } else if (option == actions[4]) {
+      system("clear");
+      printf("file name (path): ");
+      scanf("%s", file);
+      menu();
     } else {
       printf("that option doesn't exist \n");
     }
