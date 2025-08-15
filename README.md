@@ -1,6 +1,25 @@
 # sqlito
 
-sqlito es una herramienta de línea de comandos escrita en C para ejecutar archivos .sql en bases de datos PostgreSQL de forma rápida y sencilla, evitando tener que escribir manualmente el comando psql cada vez.
+Es una herramienta de línea de comandos escrita en C para ejecutar archivos .sql en bases de datos PostgreSQL de forma rápida y sencilla, evitando tener que escribir manualmente el comando psql cada vez.
+
+## Instalacion
+
+Clona el repositorio:
+```
+git clone https://github.com/WasAlexis/sqlito.git
+
+cd sqlito
+```
+luego tendras que compilar el archivo .c:
+
+```
+gcc main.c -o sqlito
+```
+
+Luego podras ejecutarlo cuando quieras:
+```
+./sqlito
+```
 
 📄 Licencia
 
