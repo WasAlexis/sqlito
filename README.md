@@ -11,6 +11,7 @@ git clone https://github.com/WasAlexis/sqlito.git
 cd sqlito
 ```
 luego tendras que compilar el archivo .c:
+(Necesitas tener instalado GCC)
 
 ```
 gcc main.c -o sqlito
@@ -20,6 +21,9 @@ Luego podras ejecutarlo cuando quieras:
 ```
 ./sqlito
 ```
+
+El proyecto esta diseñado para usarse en sistemas
+Linux.
 
 📄 Licencia
 
